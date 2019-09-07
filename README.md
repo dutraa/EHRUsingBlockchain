@@ -1,4 +1,4 @@
-# Project Title
+# BlockMMP
 Electronic Health Records managing using hyperledger fabric composer
 
 ## Operating System Used: Ubuntu 18.04
@@ -8,7 +8,7 @@ To run Hyperledger Composer and Hyperledger Fabric, we recommend you have at lea
 
 The following are prerequisites for installing the required development tools:
 
-* Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12
+* Operating Systems: Ubuntu Linux 14.04 / 16.04 / 18.04 LTS (both 64-bit), or Mac OS 10.12
 * Docker Engine: Version 17.03 or higher
 * Docker-Compose: Version 1.8 or higher
 * Node: 8.9 or higher (note version 9 is not supported)
@@ -28,7 +28,7 @@ The following are prerequisites for installing the required development tools:
 
 ### If you're running on Ubuntu, you can download the prerequisites using the following commands:
 ```
-curl -O https://hyperledger.github.io/composer/v0.19/prereqs-ubuntu.sh
+curl -O https://hyperledger.github.io/composer/v0.20/prereqs-ubuntu.sh
 
 chmod u+x prereqs-ubuntu.sh
 ```
@@ -44,15 +44,15 @@ There are a few useful CLI tools for Composer developers. The most important one
 Note that you **should not** use **su** or **sudo** for the following npm commands.
 Essential CLI tools:
 ```
-npm install -g composer-cli@0.19
+npm install -g composer-cli@0.20
 ```
 Utility for running a REST Server on your machine to expose your business networks as RESTful APIs:
 ```
-npm install -g composer-rest-server@0.19
+npm install -g composer-rest-server@0.20
 ```
 Useful utility for generating application assets:
 ```
-npm install -g generator-hyperledger-composer@0.19
+npm install -g generator-hyperledger-composer@0.20
 ```
 Yeoman is a tool for generating applications, which utilises generator-hyperledger-composer:
 ```
@@ -100,7 +100,7 @@ composer card import --file networkadmin.card
 ```
 4. To check that the business network has been deployed successfully, run the following command to ping the network:
 ```
-composer network ping --card admin@tutorial-network
+composer network ping --card admin@healthcare
 ```
 
 ## Step 3:(Generating a REST server)
